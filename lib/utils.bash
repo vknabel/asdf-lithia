@@ -52,6 +52,7 @@ download_release() {
       i686)   architecture="x86_64" ;;
       x86_64) architecture="x86_64" ;;
       arm)    dpkg --print-architecture | grep -q "arm64" && architecture="arm64" || architecture="arm" ;;
+      *)      architecture="x86_64" ;;
   esac
 
   url="$GH_REPO/releases/download/v${version}/${TOOL_NAME}_${version}_${ostype}_${architecture}.tar.gz"
