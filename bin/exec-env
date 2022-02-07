@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+if [ "${LITHIA_STDLIB}" = "" ]; then
+  export LITHIA_STDLIB="$ASDF_INSTALL_PATH/stdlib"
+fi
